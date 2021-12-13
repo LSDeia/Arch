@@ -1,0 +1,3 @@
+# ArchLinux
+
+Wiki installation ArchLinux
