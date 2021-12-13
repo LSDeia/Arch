@@ -38,6 +38,65 @@ Pour verifier votre connection executer la commande : `# ping 8.8.8.8`
 
 Aucune erreur ? Bravo vous etes desormais connecte a l'internet !
 
+<h2> Mise a jour de l'horloge <h2>
+
+Pour s'assurer que l'horloge interne est a jour : `# timedatectl set-ntp true`
+
+<h2> Partitionner les disques <h2>
+
+Pour afficher chaque disques et ses partitionns : `# fdisk -l`
+
+Regardez si vous voyez une partition nomme EFI, si oui cliquez-ici, sinon continuer votre lecture.
+
+Pour commecer la partition du disque executez : `# fdisk /dev/$LE_DISQUE_A_PARTITIONNER`
+
+!!! Attention choisissez bien votre disque, et suivez bien les instructions sous peine de voir votre disque totalement efface !!!
+
+<h4> Partition EFI <h4>
+
+Nous allons commencer par creer la partition EFI pour cela tapez `n` puis entrer.
+
+il s'affiche `Numero de la partition` ... tapez entrer.
+
+il s'affiche `Premier secteur`... tapez entrer.
+
+il s'affiche `Dernier secteur`... tapez `+550M`.
+
+Ensuite tapez `t`, entrer, puis L. Vous devriez observer une liste, trouvez `EFI filesystem` et tappez `q` entrer, puis son numero.
+
+<h4> Partition Racine <h4>
+
+Maintenant nous allons creer la partition Racine, celle ou tout vos fichier se retrouverons pour cela tapez `n` puis entrer.
+
+il s'affiche `Numero de la partition` ... tapez entrer.
+
+il s'affiche `Premier secteur`... tapez entrer.
+
+il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`.
+
+<h4> Formatter les partitions <h4>
+
+Formattage partition EFI : `# mkfs.fat -F 32 /dev/$VOTRE_PARTITION_EFI`
+
+Formattage partition Racine : `# mkfs.ext4 /dev/$VOTRE_PARTITION_RACINE`
+
+<h2> Monter la partition racine <h2>
+
+Pour continuer il vous faut monter votre partition racine : `# mount /dev/$VOTRE_PARTITION_RACINE /mnt`
+
+<h2> Installation des paquet esssentiel <h2>
+
+L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt base linux linux-firmware`
+
+Nous installerons le reste des paquets dont vous avez besoin plus tard.
+
+<h2> Configuration de votre sysrteme <h2>
+
+
+
+
+
+
 
 
 
