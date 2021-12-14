@@ -95,13 +95,13 @@ Formattage partition Racine : `# mkfs.ext4 /dev/$VOTRE_PARTITION_RACINE`
 
 Pour continuer il vous faut monter votre partition racine : `# mount /dev/$VOTRE_PARTITION_RACINE /mnt`
 
-<h2> Installation des paquet esssentiel <h2>
+<h2> Installation des paquets esssentiels <h2>
 
 L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt base linux linux-firmware`
 
 Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
-<h2> Configuration de votre sysrteme <h2>
+<h2> Configuration de votre systeme <h2>
 
 Generer un fichier "fstab"  : `# genfstab -U /mnt >> ?mnt/etc/fstbab`
 
@@ -166,6 +166,12 @@ Lire les pages de man : `# pacman -S man-db texinfo`
 Compiler un programme C : `# pacman -S gcc UN_AUTRE!!!` !!!!!!!!!!!!!!!!!!!!!!!
 
 Lancer un make : `# pacman -S make`
+
+Naviguer sur le web : `# pacman -S firefox lynx` AUTRE !!!!!!!!!!!!!!!!!!!
+
+INFORMATION : lynx est un navigateur base sur le texte (pas d'interface graphique), il s'utilise dans le terminal.
+
+
 
 
 
