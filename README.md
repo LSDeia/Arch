@@ -92,6 +92,35 @@ Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
 <h2> Configuration de votre sysrteme <h2>
 
+Generer un fichier "fstab"  : `# genfstab -U /mnt >> ?mnt/etc/fstbab`
+
+Root dans votre nouveau systeme : `# arch-chroot /mnt`
+
+Changer votre fuseau horaire : `# ln -sf /usr/share/zoneinfo/$REGION/$VILLE /etc/localtime`
+
+Si vous etes en france la commade sera : `# ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime`
+
+Generer le fichier /etc/adjtime : `hwclock --systohc`
+
+Editer le fichier /etc/locale.gen : `nano /etc/locale.gen`
+
+Trouvez la ligne fr_FR.UTF-8 UTF-8, supprimer le `#` en debut de ligne puis faites ctrl+S et ctrl+X pour sauvegarder et sauver les modifications.
+
+Puis executer : `# locale-gen` pour generer les changements.
+
+Creer le fichier /etc/locale.conf : `# nano /etc/locale.conf`
+
+Puis ecrire : `LANG=fr_FR.UTF-8` et faites ctrl+S et ctrl+X comme precedemment.
+
+Creer le fichier /etc/vconsole.conf : `# nano /etc/vconsole.conf`
+
+Puis ecrire : `KEYMAP=$NOM_DU_LAYOUT` ou "$NOM_DU_LAYOUT" et le layout choisis au debut de l'installation et faites ctrl+S et ctrl+X comme precedemment.
+
+Creer le fichier /etc/hostname : `# nano /etc/hostname`
+
+Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce que vous voulez alors lachez-vous !
+
+
 
 
 
