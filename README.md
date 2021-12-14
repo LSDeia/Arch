@@ -2,6 +2,17 @@
 
 Wiki installation ArchLinux
 
+<h4> TODO <h4>
+
+- [ ] Faire la mise en forme
+
+- [ ] Taille totale de l'installation -> taille recommande
+
+- [ ] Chasse au fautes d'ortographes
+
+- [ ] Tester le wiki dans une VM ou UEFI
+
+
 <h2> Configuration du clavier <h2>
 
 Votre clavier sera par default en US, pour afficher tout les clavier possible executez :`# ls /usr/share/kbd/keymaps/**/*.map.gz `
@@ -44,11 +55,11 @@ Pour s'assurer que l'horloge interne est a jour : `# timedatectl set-ntp true`
 
 <h2> Partitionner les disques <h2>
 
+Cette partie s'applique au espace de stockage completement vide.
+
 Pour afficher chaque disques et ses partitionns : `# fdisk -l`
 
-Regardez si vous voyez une partition nomme EFI, si oui cliquez-ici, sinon continuer votre lecture.
-
-Pour commecer la partition du disque executez : `# fdisk /dev/$LE_DISQUE_A_PARTITIONNER`
+Pour commencer la partition du disque executez : `# fdisk /dev/$LE_DISQUE_A_PARTITIONNER`
 
 !!! Attention choisissez bien votre disque, et suivez bien les instructions sous peine de voir votre disque totalement efface !!!
 
@@ -119,6 +130,37 @@ Puis ecrire : `KEYMAP=$NOM_DU_LAYOUT` ou "$NOM_DU_LAYOUT" et le layout choisis a
 Creer le fichier /etc/hostname : `# nano /etc/hostname`
 
 Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce que vous voulez alors lachez-vous !
+
+<h2> Configurer les utilisateurs <h2>
+
+Changer le mot de passe root, ATTENTION AVEC CE MOT DE PASSE VOUS AVEZ LA MAIN SUR VOTRE SYSTEM ENTIER, NE LE PARTAGER PAS ET CHOISISSEZ UN MDP FORT.
+
+Recommandation mots de passe : https://www.economie.gouv.fr/particuliers/creer-mot-passe-securise
+
+Commande : `# passwd`
+
+<h4> Creation de votre utilisateur <h4>
+
+Pour creer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage $VOTRE_NOM_D'UTILISATEUR`
+
+Changer votre mots de passe aussi avec : `# passwd $VOTRE_NOM_D'UTILISATEUR`
+
+<h4> Ajout au groupe wheel <h4>
+
+Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
+
+Parcourez le fichier jusqu'a trouver la ligne : `# %wheel ALL=(ALL) ALL` et supprimez le `#` en debut de ligne puis faites ctrl+S et ctrl+X.
+
+<h2> Installation des paquets <h2>
+
+Mise a jour des paquets : `# pacman -Syu`
+
+Installation des paquets indispensable : `# pacman -S sudo grub networkmanager `
+
+Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
+
+Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
+
 
 
 
