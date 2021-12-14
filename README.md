@@ -43,7 +43,7 @@ Pour vous connectez a votre reseau sans fil : `[iwd]# station device connect $NO
 
 Si un mot de passe est necessaire il vous sera demande de le taper.
 
-Pour sortir taper `[iwd]# exit`.
+Pour sortir taper `[iwd]# exit`
 
 Pour verifier votre connection executer la commande : `# ping 8.8.8.8`
 
@@ -71,7 +71,7 @@ il s'affiche `Numero de la partition` ... tapez entrer.
 
 il s'affiche `Premier secteur`... tapez entrer.
 
-il s'affiche `Dernier secteur`... tapez `+550M`.
+il s'affiche `Dernier secteur`... tapez `+550M`
 
 Ensuite tapez `t`, entrer, puis L. Vous devriez observer une liste, trouvez `EFI filesystem` et tappez `q` entrer, puis son numero.
 
@@ -83,7 +83,7 @@ il s'affiche `Numero de la partition` ... tapez entrer.
 
 il s'affiche `Premier secteur`... tapez entrer.
 
-il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`.
+il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`
 
 <h4> Formatter les partitions <h4>
 
@@ -160,6 +160,16 @@ Installation des paquets indispensable : `# pacman -S sudo grub networkmanager `
 Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
 
 Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
+
+Lire les pages de man : `# pacman -S man-db texinfo`
+
+Compiler un programme C : `# pacman -S gcc UN_AUTRE!!!` !!!!!!!!!!!!!!!!!!!!!!!
+
+Lancer un make : `# pacman -S make`
+
+
+
+
 
 
 
