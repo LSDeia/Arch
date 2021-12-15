@@ -169,6 +169,16 @@ Lancer un make : `# pacman -S make`
 
 Naviguer sur le web : `# pacman -S firefox lynx` AUTRE !!!!!!!!!!!!!!!!!!!
 
+Editer du code source : `# pacman -S emacs vim nano code`
+
+Debogguer du code : ` # pacman -S gdb`
+
+Editer une image matricielle : ` # pacman -S imagemagick inkscape gimp`
+
+Compresser des fichier : ` # pacman -S p7zip tar `
+
+Gestionnaire Bureau : ` # pacman -S xfce4 gnome dwm`
+
 INFORMATION : lynx est un navigateur base sur le texte (pas d'interface graphique), il s'utilise dans le terminal.
 
 
