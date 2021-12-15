@@ -12,20 +12,23 @@ Wiki installation ArchLinux
 
 - [ ] Tester le wiki dans une VM ou UEFI
 
+- [ ] Faire un sommaire
 
-<h2> Configuration du clavier <h2>
+- [ ] Expliquer la variable
+
+## 1. Configuration du clavier
 
 Votre clavier sera par default en US, pour afficher tout les clavier possible executez :`# ls /usr/share/kbd/keymaps/**/*.map.gz `
 
 Pour modifier la configuration du clavier : `# loadkeys $NOM_DU_LAYOUT`
 
-<h2> Verifier le mode de boot <h2>
+## 2. Verifier le mode de boot
 
 Ce tutoriel est pour le boot mode UEFi, pour verifier si vous etes bien en UEFI : `# ls /sys/firmware/efi/efivars`
 
 Si le dossier est affiche sans erreur alors vous etes bien en UEFI.
 
-<h2> Connection a internet <h2>
+## 3. Connection a internet
 
 Pour etre sur que votre interface reseau est activee : `# ip link`
 
@@ -49,11 +52,11 @@ Pour verifier votre connection executer la commande : `# ping 8.8.8.8`
 
 Aucune erreur ? Bravo vous etes desormais connecte a l'internet !
 
-<h2> Mise a jour de l'horloge <h2>
+## 4. Mise a jour de l'horloge
 
 Pour s'assurer que l'horloge interne est a jour : `# timedatectl set-ntp true`
 
-<h2> Partitionner les disques <h2>
+## 5. Partitionner les disques
 
 Cette partie s'applique au espace de stockage completement vide.
 
@@ -63,7 +66,7 @@ Pour commencer la partition du disque executez : `# fdisk /dev/$LE_DISQUE_A_PART
 
 !!! Attention choisissez bien votre disque, et suivez bien les instructions sous peine de voir votre disque totalement efface !!!
 
-<h4> Partition EFI <h4>
+#### 5.1 Partition EFI
 
 Nous allons commencer par creer la partition EFI pour cela tapez `n` puis entrer.
 
@@ -75,7 +78,7 @@ il s'affiche `Dernier secteur`... tapez `+550M`
 
 Ensuite tapez `t`, entrer, puis L. Vous devriez observer une liste, trouvez `EFI filesystem` et tappez `q` entrer, puis son numero.
 
-<h4> Partition Racine <h4>
+#### 5.2 Partition Racine
 
 Maintenant nous allons creer la partition Racine, celle ou tout vos fichier se retrouverons pour cela tapez `n` puis entrer.
 
@@ -85,23 +88,23 @@ il s'affiche `Premier secteur`... tapez entrer.
 
 il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`
 
-<h4> Formatter les partitions <h4>
+#### 5.3 Formatter les partitions
 
 Formattage partition EFI : `# mkfs.fat -F 32 /dev/$VOTRE_PARTITION_EFI`
 
 Formattage partition Racine : `# mkfs.ext4 /dev/$VOTRE_PARTITION_RACINE`
 
-<h2> Monter la partition racine <h2>
+## 6. Monter la partition racine
 
 Pour continuer il vous faut monter votre partition racine : `# mount /dev/$VOTRE_PARTITION_RACINE /mnt`
 
-<h2> Installation des paquets esssentiels <h2>
+## 7. Installation des paquets esssentiels
 
 L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt base linux linux-firmware`
 
 Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
-<h2> Configuration de votre systeme <h2>
+## 8. Configuration de votre systeme
 
 Generer un fichier "fstab"  : `# genfstab -U /mnt >> ?mnt/etc/fstbab`
 
@@ -131,7 +134,7 @@ Creer le fichier /etc/hostname : `# nano /etc/hostname`
 
 Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce que vous voulez alors lachez-vous !
 
-<h2> Configurer les utilisateurs <h2>
+## 9. Configurer les utilisateurs
 
 Changer le mot de passe root, ATTENTION AVEC CE MOT DE PASSE VOUS AVEZ LA MAIN SUR VOTRE SYSTEM ENTIER, NE LE PARTAGER PAS ET CHOISISSEZ UN MDP FORT.
 
@@ -139,13 +142,13 @@ Recommandation mots de passe : https://www.economie.gouv.fr/particuliers/creer-m
 
 Commande : `# passwd`
 
-<h4> Creation de votre utilisateur <h4>
+#### 9.1 Creation de votre utilisateur
 
 Pour creer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage $VOTRE_NOM_D'UTILISATEUR`
 
 Changer votre mot de passe aussi avec : `# passwd $VOTRE_NOM_D'UTILISATEUR`
 
-<h4> Creer l'utilisateur stagiaire <h4>
+#### 9.2 Creer l'utilisateur stagiaire
 
 Pour creer le stagiaire : `# useradd -mG Stagiaire`
 
@@ -153,13 +156,13 @@ Pour creer le stagiaire : `# useradd -mG Stagiaire`
 
 Changer le mot de passe aussi avec : `# passwd Stagiaire`
 
-<h4> Configuration du groupe wheel <h4>
+#### 9.3 Configuration du groupe wheel
 
 Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
 
 Parcourez le fichier jusqu'a trouver la ligne : `# %wheel ALL=(ALL) ALL` et supprimez le `#` en debut de ligne puis faites ctrl+S et ctrl+X.
 
-<h2> Installation du grub <h2>
+## 10. Installation du grub
 
 Installation des paquets requis : ` # pacman -S efibootmgr dosfstools os-prober mtools`
 
@@ -171,7 +174,7 @@ Installer le grub : ` # grub-install --target=x86_64-efi --bootloader-id=archlin
 
 Creer le fichier de configurration du grub : ` # grub-mkconfig -o /boot/grub/grub.cfg`
 
-<h2> Installation des paquets <h2>
+## 11. Installation des paquets
 
 Mise a jour des paquets : `# pacman -Syu`
 
