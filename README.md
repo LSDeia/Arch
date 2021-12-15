@@ -161,7 +161,7 @@ Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
 
 Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
 
-Lire les pages de man : `# pacman -S man-db texinfo`
+Lire les pages de man : `# pacman -S man-db man_pages texinfo`
 
 Compiler un programme C : `# pacman -S gcc UN_AUTRE!!!` !!!!!!!!!!!!!!!!!!!!!!!
 
