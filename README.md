@@ -143,9 +143,17 @@ Commande : `# passwd`
 
 Pour creer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage $VOTRE_NOM_D'UTILISATEUR`
 
-Changer votre mots de passe aussi avec : `# passwd $VOTRE_NOM_D'UTILISATEUR`
+Changer votre mot de passe aussi avec : `# passwd $VOTRE_NOM_D'UTILISATEUR`
 
-<h4> Ajout au groupe wheel <h4>
+<h4> Creer l'utilisateur stagiaire <h4>
+
+Pour creer le stagiaire : `# useradd -mG Stagiaire`
+
+!!!!!
+
+Changer le mot de passe aussi avec : `# passwd Stagiaire`
+
+<h4> Configuration du groupe wheel <h4>
 
 Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
 
@@ -175,11 +183,15 @@ Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-g
 
 Lire les pages de man : `# pacman -S man-db man_pages texinfo`
 
-Compiler un programme C : `# pacman -S gcc UN_AUTRE!!!` !!!!!!!!!!!!!!!!!!!!!!!
+Compiler un programme C : `# pacman -S gcc UN_AUTRE!!!`
+
+!!!!!
 
 Lancer un make : `# pacman -S make`
 
-Naviguer sur le web : `# pacman -S firefox lynx` AUTRE !!!!!!!!!!!!!!!!!!!
+Naviguer sur le web : `# pacman -S firefox lynx`
+
+!!!!!
 
 INFORMATION : lynx est un navigateur base sur le texte (pas d'interface graphique), il s'utilise dans le terminal.
 
@@ -191,7 +203,9 @@ Editer une image matricielle : ` # pacman -S imagemagick inkscape gimp`
 
 Compresser des fichier : ` # pacman -S p7zip tar `
 
-Gestionnaire Bureau : ` # pacman -S xfce4 gnome dwm` !!!!!!!!!!!!!!!!!
+Gestionnaire Bureau : ` # pacman -S xfce4 gnome dwm`
+
+!!!!!
 
 
 
