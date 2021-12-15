@@ -151,6 +151,18 @@ Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
 
 Parcourez le fichier jusqu'a trouver la ligne : `# %wheel ALL=(ALL) ALL` et supprimez le `#` en debut de ligne puis faites ctrl+S et ctrl+X.
 
+<h2> Installation du grub <h2>
+
+Installation des paquets requis : ` # pacman -S efibootmgr dosfstools os-prober mtools`
+
+Creation du repertoire /boot/EFI : ` # mkdir /boot/EFI`
+
+Monter la partition EFI dans /boot/EFI : ` # mount /dev/sda1 /boot/EFI`
+
+Installer le grub : ` # grub-install --target=x86_64-efi --bootloader-id=archlinux_grub --recheck`
+
+Creer le fichier de configurration du grub : ` # grub-mkconfig -o /boot/grub/grub.cfg`
+
 <h2> Installation des paquets <h2>
 
 Mise a jour des paquets : `# pacman -Syu`
