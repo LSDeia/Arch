@@ -158,13 +158,15 @@ Changer le mot de passe aussi avec : `# passwd Stagiaire`
 
 #### 9.3 Configuration du groupe wheel
 
+Installation de sudo : ` # pacman -S sudo`
+
 Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
 
 Parcourez le fichier jusqu'a trouver la ligne : `# %wheel ALL=(ALL) ALL` et supprimez le `#` en debut de ligne puis faites ctrl+S et ctrl+X.
 
 ## 10. Installation du grub
 
-Installation des paquets requis : ` # pacman -S efibootmgr dosfstools os-prober mtools`
+Installation des paquets requis : ` # pacman -S grub efibootmgr dosfstools os-prober mtools`
 
 Creation du repertoire /boot/EFI : ` # mkdir /boot/EFI`
 
@@ -178,7 +180,7 @@ Creer le fichier de configurration du grub : ` # grub-mkconfig -o /boot/grub/gru
 
 Mise a jour des paquets : `# pacman -Syu`
 
-Installation des paquets indispensable : `# pacman -S sudo grub networkmanager `
+Installation des paquets indispensable : `# pacman -S networkmanager `
 
 Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
 
