@@ -202,7 +202,7 @@ INFORMATION : lynx est un navigateur base sur le textuel, il s'utilise dans le t
 
 Editer une image matricielle / vectorielle  : ` # pacman -S imagemagick inkscape gimp`
 
-Compresser des fichier : ` # pacman -S p7zip tar `
+(De)compresser des fichier : ` # pacman -S p7zip tar `
 
 
 
