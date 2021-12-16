@@ -2,6 +2,10 @@
 
 Wiki installation ArchLinux
 
+❗ **INFORMATION IMPORTANTE** : Chaque suite de caracteres precede d'un `$` est une variable que vous devez modifier vous meme.
+
+❗ **Exemple** : ` # echo $MON_PRENOM` devient ` # echo Remi`
+
 <h4> TODO <h4>
 
 - [ ] Faire la mise en forme
