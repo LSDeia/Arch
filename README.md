@@ -32,7 +32,7 @@ Ce tutoriel est pour le boot mode UEFi, pour verifier si vous etes bien en UEFI 
 
 Si le dossier est affiche sans erreur alors vous etes bien en UEFI.
 
-## 3. Connection a internet
+## 3. 📶 Connection a internet 📶
 
 Pour etre sur que votre interface reseau est activee : `# ip link`
 
@@ -56,11 +56,11 @@ Pour verifier votre connection executer la commande : `# ping 8.8.8.8`
 
 Aucune erreur ? Bravo vous etes desormais connecte a l'internet !
 
-## 4. Mise a jour de l'horloge
+## 4. 🕑 Mise a jour de l'horloge 🕑
 
 Pour s'assurer que l'horloge interne est a jour : `# timedatectl set-ntp true`
 
-## 5. Partitionner les disques
+## 5. 💾 Partitionner les disques 💾
 
 Cette partie s'applique au espace de stockage completement vide.
 
@@ -102,7 +102,7 @@ Formattage partition Racine : `# mkfs.ext4 /dev/$VOTRE_PARTITION_RACINE`
 
 Pour continuer il vous faut monter votre partition racine : `# mount /dev/$VOTRE_PARTITION_RACINE /mnt`
 
-## 7. Installation des paquets esssentiels
+## 7. 📥 Installation des paquets esssentiels 📥
 
 L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt base linux linux-firmware`
 
@@ -138,7 +138,7 @@ Creer le fichier /etc/hostname : `# nano /etc/hostname`
 
 Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce que vous voulez alors lachez-vous !
 
-## 9. Configurer les utilisateurs
+## 9. 👤 Configurer les utilisateurs 👤
 
 Changer le mot de passe root, ATTENTION AVEC CE MOT DE PASSE VOUS AVEZ LA MAIN SUR VOTRE SYSTEM ENTIER, NE LE PARTAGER PAS ET CHOISISSEZ UN MDP FORT.
 
