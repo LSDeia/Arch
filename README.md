@@ -140,7 +140,7 @@ Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce q
 
 ## 9. 👤 Configurer les utilisateurs 👤
 
-Changer le mot de passe root, ATTENTION AVEC CE MOT DE PASSE VOUS AVEZ LA MAIN SUR VOTRE SYSTEM ENTIER, NE LE PARTAGER PAS ET CHOISISSEZ UN MDP FORT.
+❗ **CHANGER LE MOT DE PASSE ROOT : ATTENTION AVEC CE MOT DE PASSE VOUS AVEZ LA MAIN SUR VOTRE SYSTEM ENTIER, NE LE PARTAGEZ PAS ET CHOISISSEZ UN MDP FORT.** ❗
 
 Recommandation mots de passe : https://www.economie.gouv.fr/particuliers/creer-mot-passe-securise
 
@@ -184,7 +184,7 @@ Creer le fichier de configurration du grub : `# grub-mkconfig -o /boot/grub/grub
 
 Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne `#Port 22` et supprimez le diese, puis ctrl+X ctrl+S.
 
-## 11. Installation des paquets
+## 11. 📥 Installation des paquets 📥
 
 Mise a jour des paquets : `# pacman -Syu`
 
