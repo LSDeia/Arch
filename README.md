@@ -174,13 +174,21 @@ Monter la partition EFI dans /boot/EFI : ` # mount /dev/sda1 /boot/EFI`
 
 Installer le grub : ` # grub-install --target=x86_64-efi --bootloader-id=archlinux_grub --recheck`
 
-Creer le fichier de configurration du grub : ` # grub-mkconfig -o /boot/grub/grub.cfg`
+Creer le fichier de configurration du grub : `# grub-mkconfig -o /boot/grub/grub.cfg`
+
+## Configuration de ssh Pas ici !!!!!
+
+Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne `#Port 22` et supprimez le diese, puis ctrl+X ctrl+S.
 
 ## 11. Installation des paquets
 
 Mise a jour des paquets : `# pacman -Syu`
 
-Installation des paquets indispensable : `# pacman -S networkmanager `
+Installation des paquets indispensable : `# pacman -S networkmanager`
+
+Installer ssh : `# pacman -S openssh`
+
+Installer apache : ` # pacman -S apache`
 
 Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
 
@@ -202,9 +210,17 @@ INFORMATION : lynx est un navigateur base sur le textuel, il s'utilise dans le t
 
 Editer une image matricielle / vectorielle  : ` # pacman -S imagemagick inkscape gimp`
 
-(De)compresser des fichier : ` # pacman -S p7zip tar `
+(De)compresser des fichier : ` # pacman -S p7zip tar`
 
+## Lancement au demarrage
 
+Lancer ssh au demarrage : ` # systemctl enable sshd`
+
+Lancer apache au demarrage : ` # systemctl enable apache`
+
+Lancer lightdm au demarrage : ` # systemctl enable lightdm`
+
+Lancer networkmanager au demarrage : ` # systemctl enable NetworkManager`
 
 
 
