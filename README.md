@@ -182,31 +182,29 @@ Mise a jour des paquets : `# pacman -Syu`
 
 Installation des paquets indispensable : `# pacman -S networkmanager `
 
-
-
-Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
-
 Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
 
-Lire les pages de man : `# pacman -S man-db man_pages texinfo`
+Gestionnaire de Bureau / Fenetre : `# pacman -S i3-gaps i3blocks i3lock i3status xfce4 gnome ratpoison`
 
 Compiler un programme C : `# pacman -S gcc tcc`
 
+Lire les pages de man : `# pacman -S man-db man_pages texinfo`
+
 Lancer un make : `# pacman -S make`
-
-Naviguer sur le web : `# pacman -S firefox chromium lynx`
-
-INFORMATION : lynx est un navigateur base sur le texte (pas d'interface graphique), il s'utilise dans le terminal.
 
 Editer du code source : `# pacman -S emacs vim nano code`
 
 Debogguer du code : ` # pacman -S gdb ghidra`
 
-Editer une image matricielle : ` # pacman -S imagemagick inkscape gimp`
+Naviguer sur le web : `# pacman -S firefox chromium lynx`
+
+INFORMATION : lynx est un navigateur base sur le textuel, il s'utilise dans le terminal.
+
+Editer une image matricielle / vectorielle  : ` # pacman -S imagemagick inkscape gimp`
 
 Compresser des fichier : ` # pacman -S p7zip tar `
 
-Gestionnaire Bureau : ` # pacman -S xfce4 gnome ratpoison`
+
 
 
 
