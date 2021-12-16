@@ -182,6 +182,8 @@ Mise a jour des paquets : `# pacman -Syu`
 
 Installation des paquets indispensable : `# pacman -S networkmanager `
 
+
+
 Installation de i3 : `# pacman -S i3-gaps i3blocks i3lock i3status`
 
 Installation de lightdm : `# pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings`
