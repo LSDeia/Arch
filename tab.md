@@ -20,35 +20,44 @@ Cette liste n'est pas exhaustive.
 
 ### Gestionnaire de paquets
 
-* Installer un logiciel.
-* Désinstaller un logiciel.
+* Installer un logiciel : `$ sudo pacman -S PACKAGE_NAME`
+* Désinstaller un logiciel : `$ sudo pacman -R PACKAGE_NAME`
 * Faire une recherche sur les paquets disponibles.
-* Faire une mise à jour.
+* Faire une mise à jour : `$ sudo pacman -Syu`
 * Lister les fichiers installés par un paquet.
 * Rechercher quel paquet contient un fichier donné.
   * Idem si le paquet n'est pas installé.
 
 ### Réseau
 
-* Pouvoir se connecter sur une autre machine avec `ssh`.
+* Pouvoir se connecter sur une autre machine avec `ssh` : ssh USER@DOMAIN
 * Permettre à une autre machine de se connecter sur la vôtre.
 * Installer un serveur web capable de lire vos pages perso (`userdir`).
 
 ### Sauvegardes
 
-* Faire une archive d'un répertoire (et de ses sous répertoires).
-* Copier l'archive sur une clé USB.
+* Faire une archive d'un répertoire (et de ses sous répertoires) : `$ tar cvf NOM_DE_L'ARCHIVE.tar CHEMIN_DU_REPERTOIRE_A_ARCHIVER`
+* Copier l'archive sur une clé USB : `$ sudo mount /dev/sdb /mnt`
+
+`$ sudo cp CHEMIN_DE_L'ARCHIVE /mnt`
+
+`$ sudo umount /mnt`
 * Copier l'archive via `scp` (vous pouvez vous entraîner sur `localhost`).
 
 ### Services (voir `systemd` ou autre selon OS)
 
-* Savoir démarrer/stopper un service.
-* Savoir en vérifier l'état.
+* Savoir démarrer/stopper un service : `$ sudo systemctl start NOM_DU_SERVICE`
+
+`$ sudo systemctl stop NOM_DU_SERVICE`
+* Savoir en vérifier l'état : `$ pacman sudo systemctl status NOM_DU_SERVICE`
+
 * Savoir afficher les messages d'erreur.
 
 ### Divers
 
 * Comment faire pour que le *stagiaire* n'ait pas accès aux données de votre compte ?
+
+`$ chmod -R 711 ~/` 
 
 ### Bonus
 
