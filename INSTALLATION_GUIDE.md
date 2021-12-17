@@ -174,7 +174,7 @@ Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne 
 
 Mise a jour des paquets : `# pacman -Syu`
 
-Installation des paquets indispensable : `# pacman -S networkmanager`
+Installation des paquets indispensable : `# pacman -S networkmanager man-pages`
 
 Installer ssh : `# pacman -S openssh`
 
