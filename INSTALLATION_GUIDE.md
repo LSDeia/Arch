@@ -6,20 +6,6 @@ Wiki installation ArchLinux
 
 ❗ **Exemple** : ` # echo $MON_PRENOM` devient ` # echo Remi`
 
-<h4> TODO <h4>
-
-- [ ] Faire la mise en forme
-
-- [ ] Taille totale de l'installation -> taille recommande
-
-- [ ] Chasse au fautes d'ortographes
-
-- [ ] Tester le wiki dans une VM ou UEFI
-
-- [ ] Faire un sommaire
-
-- [ ] Expliquer la variable
-
 ## 1. Configuration du clavier ⌨
 
 Votre clavier sera par default en US, pour afficher tout les clavier possible executez :`# ls /usr/share/kbd/keymaps/**/*.map.gz `
