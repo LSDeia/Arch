@@ -19,13 +19,13 @@
 
 #### Gestionnaire bureau / besoin
 
-i3 : gestionnaire de fenetre rapide, leger et utilisable entierement au clavier (sauf Navigateur Web).
+i3 : gestionnaire de fenetre rapide, leger et utilisable entièrement au clavier (sauf Navigateur Web).
 
 xfce : gestionnaire de bureau rapide, leger, esthetique et pratique au quotidien.
 
-gnome : gestionnaire de bureau tres beau, facile a prendre en main et pratique au quotidien.
+gnome : gestionnaire de bureau très beau, facile à prendre en main et pratique au quotidien.
 
-ratpoison : gestionnaire de fenetre ultraleger et rapide, ne propose que le strict minimum. Rends les machines tres peu puissante utilisables.
+ratpoison : gestionnaire de fenetre ultraléger et rapide, ne propose que le strict minimum. Rends les machines très peu puissante utilisables.
 
 #### Compiler un programme c
 
@@ -35,51 +35,51 @@ tcc : compilateur minimaliste, moins d'option mais beaucoup plus rapide.
 
 #### Regarder les pages de man de la libc :
 
-man-db : facon traditionnelle de lire les pages de man
+man-db : façon traditionnelle de lire les pages de man.
 
-texinfo : programme GNU pour lire les pages de man
+texinfo : programme GNU pour lire les pages de man.
 
 #### Lancer un make :
 
-make  : programme gnu pour generer des executables
+make  : programme gnu pour générer des exécutables.
 
 #### Editer du code source
 
-vim : rapide, pas de gui et beaucoup de raccourci tres interresant.
+vim : rapide, pas de gui et beaucoup de raccourci très interresant.
 
 nano : programme gnu, pas de gui non plus mais plus user-friendly que vim.
 
-code : editeur de code de microsoft, belle gui et plein d'extensions tres pratique.
+code : éditeur de code de microsoft, belle gui et plein d'extensions très pratique.
 
-emacs programme gnu, avec une gui tres customisable.
+emacs programme gnu, avec une gui très customisable.
 
 #### Deboguer du code source
 
 gdb : debugger gnu.
 
-ghidra : outils de reverse engineering developpe par la NSA, contient aussi un debugger.
+ghidra : outils de reverse engineering développé par la NSA, contient aussi un debugger.
 
 #### Naviguer sur le web
 
-firefox : navigateur rapide, moins gourmands que chrome et tres customisable
+firefox : navigateur rapide, moins gourmands que chrome et très customisable.
 
-lynx : navigateur textuel, adapte au synthetiseurs vocaux.
+lynx : navigateur textuel, bien adapté au synthétiseurs vocaux.
 
-chromium : projet open-source de google qui sert de base a de nombreux navigateur
+chromium : projet open-source de google qui sert de base à de nombreux navigateurs.
 
 #### Editer une image matricielle
 
-imagemagick : programme avec gui peu pratique mais tres interresant a uiliser dans le terminal.
+imagemagick : programme avec gui peu pratique mais très interresant à utiliser dans le terminal.
 
-gimp : programme gnu, gui complete requiert un peu d'experience
+gimp : programme gnu, gui complète, requiert un peu d'experience.
 
 #### Editer une image vectorielle
 
-inkscape : programme professionel d'edition vectorielle
+inkscape : programme professionel d'edition vectorielle.
 
 #### (Dé)Compresser les archives `tar.gz`, `7z`, `rar`
 
-p7zip : peut compresser et decompresser de nombreux format d'archive diffferent.
+p7zip : peut compresser et décompresser de nombreux format d'archive diffférent.
 
 ## Gestionnaire de paquets
 
@@ -103,9 +103,9 @@ Idem si le paquet n'est pas installé : `$ pacman -Fy NOM_DU_FICHIER`
 
 Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne `#Port 22` et supprimez le diese, puis ctrl+X ctrl+S.
 
-Creation des cles ssh : `$ ssh-keygen`, dans votre dossier ~/.ssh vous trouverez le fichier `id_rsa.pub` il faut copier son contenu dans le fichier ~/.ssh/authorized_keys de la machine a laquelle vous souhaiter vous connecter.
+Création des clés ssh : `$ ssh-keygen`, dans votre dossier ~/.ssh vous trouverez le fichier `id_rsa.pub` il faut copier son contenu dans le fichier ~/.ssh/authorized_keys de la machine à laquelle vous souhaiter vous connecter.
 
-Connexion : `$ ssh USER@DOMAIN` ou USER est le nom d'un utilisateurs de la machine a laquelle vous voulez vous connecter et DOMAIN est l'adresse ip ou le nom de domaine de la machine a laquelle vous voulez vous connecter.
+Connexion : `$ ssh USER@DOMAIN` ou USER est le nom d'un utilisateurs de la machine à laquelle vous voulez vous connecter et DOMAIN est l'adresse ip ou le nom de domaine de la machine à laquelle vous voulez vous connecter.
 
 ##### Permettre à une autre machine de se connecter sur la vôtre :
 
@@ -113,11 +113,11 @@ Editer la configuration de ssh : `$ sudo nano /etc/ssh/sshd_config` trouvez la l
 
 ##### Installer un serveur web capable de lire vos pages perso (`userdir`) :
 
-Creation du repertoire ~/public_html : `$ mkdir ~/public_html`
+Création du repertoire ~/public_html : `$ mkdir ~/public_html`
 
 Changer les droits sur votre home recursivement : `$ chmod -R 755 ~/`
 
-Ouvrir un navigateur est saisir l'url : `localhost/~USERNAME` ou use4rname seras par exemple : stagiaire.
+Ouvrir un navigateur est saisir l'url : `localhost/~USERNAME` ou USERNAME seras par exemple : stagiaire.
 
 ## Sauvegardes
 
@@ -129,9 +129,9 @@ Montage de la cle usb : `$ sudo mount /dev/sdb /mnt`
 
 Copiage de l'archive : `$ sudo cp CHEMIN_DE_L'ARCHIVE /mnt`
 
-Demontage de la cle usb : `$ sudo umount /mnt`
+Démontage de la cle usb : `$ sudo umount /mnt`
 
-Copier l'archive via `scp` (vous pouvez vous entraîner sur `localhost`) : `$ scp CHEMIN_DE_L'ARCHIVE USER@DOMAIN:CHEMIN_D'ARRIVE`
+Copier l'archive via `scp` : `$ scp CHEMIN_DE_L'ARCHIVE USER@DOMAIN:CHEMIN_D'ARRIVE`
 
 ## Services (voir `systemd` ou autre selon OS)
 
@@ -146,4 +146,3 @@ Savoir afficher les messages d'erreur : `$ sudo journalctl -u NOM_DU_SERVICE | g
 Comment faire pour que le stagiaire n'ait pas accès aux données de votre compte ?
 
 `$ chmod -R 711 ~/` 
-

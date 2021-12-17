@@ -211,27 +211,3 @@ Reboot : `# reboot`
 Vous pouvez enlever votre iso quand le pc s'eteint.
 
 Votre installation d'Archlinux est terminée ! Bravo !
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
