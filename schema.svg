@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="schema.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.77058782"
+     inkscape:cx="556.069"
+     inkscape:cy="560.61099"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path249645" />
+    </marker>
+    <rect
+       x="51.126187"
+       y="691.09435"
+       width="689.19665"
+       height="126.75205"
+       id="rect29121" />
+    <rect
+       x="46.567091"
+       y="896.91692"
+       width="706.3628"
+       height="165.11174"
+       id="rect9870" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#a300ff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.213314"
+       id="rect31"
+       width="200.33405"
+       height="34.335567"
+       x="5.2158833"
+       y="9.4524632" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,11.209046,-215.8264)"
+       id="text9868"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;white-space:pre;fill:#ffffff;shape-inside:url(#rect9870)"><tspan
+         x="46.566406"
+         y="931.07602"
+         id="tspan2478">Gestionnaire de Bureau / Fenêtres</tspan></text>
+    <rect
+       style="fill:#0000ff;fill-opacity:1;stroke-width:0.225402"
+       id="rect23790"
+       width="199.42883"
+       height="34.335999"
+       x="5.4941778"
+       y="61.272812"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,1.2116675,-117.33481)"
+       id="text29119"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;white-space:pre;shape-inside:url(#rect29121);fill:#ffffff"
+       x="178.39995"
+       y="0"><tspan
+         x="215.62466"
+         y="725.25375"
+         id="tspan2480">Serveur Graphique :
+</tspan><tspan
+         x="354.20464"
+         y="775.25375"
+         id="tspan2482">Xorg</tspan></text>
+    <rect
+       style="fill:#00b600;fill-opacity:1;stroke-width:0.242488"
+       id="rect50465"
+       width="98.922241"
+       height="44.606457"
+       x="5.7978263"
+       y="113.61694" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583"
+       x="14.90614"
+       y="138.9881"
+       id="text53197"><tspan
+         sodipodi:role="line"
+         id="tspan53195"
+         style="stroke-width:0.264583"
+         x="14.90614"
+         y="138.9881">Carte Graphique </tspan></text>
+    <rect
+       style="fill:#e2e51b;fill-opacity:1;stroke-width:0.264471"
+       id="rect55287"
+       width="98.921997"
+       height="36.901768"
+       x="5.7979999"
+       y="176.07582" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.58611px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="53.604435"
+       y="193.45464"
+       id="text73967"><tspan
+         sodipodi:role="line"
+         id="tspan73965"
+         style="font-size:4.58611px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="53.604435"
+         y="195.27074">Elément logiciel qui gère ma carte graphique :</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.58611px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="53.604435"
+         y="201.00337"
+         id="tspan73969">nouveau</tspan></text>
+    <rect
+       style="fill:#feb100;fill-opacity:1;stroke-width:0.265589"
+       id="rect120573"
+       width="98.921997"
+       height="38.241791"
+       x="5.7979999"
+       y="234.16724" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93888889px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="54.521149"
+       y="245.29054"
+       id="text122051"><tspan
+         sodipodi:role="line"
+         id="tspan122049"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583;font-size:4.93888889px"
+         x="54.521149"
+         y="246.82724">Chemin du peripherique qui </tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583;font-size:4.93888889px"
+         x="54.521149"
+         y="256.52866"
+         id="tspan140127">représente ma carte graphique :</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583;font-size:4.93888889px"
+         x="54.521149"
+         y="261.37933"
+         id="tspan122515">/dev/dri/card0</tspan></text>
+    <rect
+       style="fill:#00b800;fill-opacity:1;stroke-width:0.30769"
+       id="rect144323"
+       width="91.866142"
+       height="44.605999"
+       x="111.8793"
+       y="113.617" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583"
+       x="122.39202"
+       y="140.2045"
+       id="text147517"><tspan
+         sodipodi:role="line"
+         id="tspan147515"
+         style="stroke-width:0.264583"
+         x="122.39202"
+         y="140.2045">Carte Réseau</tspan></text>
+    <rect
+       style="fill:#e2e51a;fill-opacity:1;stroke-width:0.305126"
+       id="rect149255"
+       width="91.865997"
+       height="36.902"
+       x="111.879"
+       y="176.076" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="154.73981"
+       y="185.64221"
+       id="text151183"><tspan
+         sodipodi:role="line"
+         id="tspan151181"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="154.73981"
+         y="187.59801">Elément logiciel qui gère </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="154.73981"
+         y="199.94524"
+         id="tspan154223">ma carte réseau :</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.93889px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="154.73981"
+         y="206.11885"
+         id="tspan151185">iwlwifi</tspan></text>
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.695477;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 53.559992,234.10997 C 53.053351,216.55122 53.053351,216.55122 53.053351,216.55122"
+       id="path249974" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.649237;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 52.387623,176.28301 C 51.853897,161.64177 51.853897,161.64177 51.853897,161.64177"
+       id="path249980" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.649237;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 156.80594,176.8051 c -0.53373,-14.64124 -0.53373,-14.64124 -0.53373,-14.64124"
+       id="path250108" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.636564;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 54.175801,113.60371 C 53.640039,99.693264 53.640039,99.693264 53.640039,99.693264"
+       id="path250110" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.649237;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 99.724429,61.344165 C 99.190703,46.702925 99.190703,46.702925 99.190703,46.702925"
+       id="path250112" />
+  </g>
+</svg>
