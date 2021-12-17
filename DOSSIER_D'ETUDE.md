@@ -97,7 +97,6 @@ Rechercher quel paquet contient un fichier donné : `$ pacman -Ql | grep NOM_DU_
 
 Idem si le paquet n'est pas installé : `$ pacman -Fy NOM_DU_FICHIER`
 
-
 ## Réseau
 
 ##### Pouvoir se connecter sur une autre machine avec `ssh` :
@@ -115,6 +114,10 @@ Editer la configuration de ssh : `$ sudo nano /etc/ssh/sshd_config` trouvez la l
 ##### Installer un serveur web capable de lire vos pages perso (`userdir`) :
 
 Creation du repertoire ~/public_html : `$ mkdir ~/public_html`
+
+Changer les droits sur votre home recursivement : `$ chmod -R 755 ~/`
+
+Ouvrir un navigateur est saisir l'url : `localhost/~USERNAME` ou use4rname seras par exemple : stagiaire.
 
 ## Sauvegardes
 

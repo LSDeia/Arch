@@ -12,6 +12,8 @@ Votre clavier sera par default en US, pour afficher tout les clavier possible ex
 
 Pour modifier la configuration du clavier : `# loadkeys NOM_DU_LAYOUT`
 
+Clavier francais : `# loadkeys fr`
+
 ## 2. Verifier le mode de boot ✅
 
 Ce tutoriel est pour le boot mode UEFi, pour verifier si vous etes bien en UEFI : `# ls /sys/firmware/efi/efivars`
@@ -64,7 +66,9 @@ il s'affiche `Numero de la partition` ... tapez entrer.
 
 il s'affiche `Premier secteur`... tapez entrer.
 
-il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`
+il s'affiche `Dernier secteur`... , La taille minimum requise et de 10G tapez donc une valeur bien superieure, `+30G`
+
+Effectuer les modifications : tapez `w` puis entrer.
 
 Formattage partition Racine : `# mkfs.ext4 /dev/VOTRE_PARTITION_RACINE`
 
@@ -74,7 +78,7 @@ Pour continuer il vous faut monter votre partition racine : `# mount /dev/VOTRE_
 
 ## 7. Installation des paquets esssentiels 📥
 
-L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt base linux linux-firmware`
+L'installation des paquet essentiel ce fait via pacstrap : `# pacstrap /mnt nano base linux linux-firmware`
 
 Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
@@ -102,11 +106,19 @@ Puis ecrire : `LANG=fr_FR.UTF-8` et faites ctrl+S et ctrl+X comme precedemment.
 
 Creer le fichier /etc/vconsole.conf : `# nano /etc/vconsole.conf`
 
-Puis ecrire : `KEYMAP=NOM_DU_LAYOUT` ou "$NOM_DU_LAYOUT" et le layout choisis au debut de l'installation et faites ctrl+S et ctrl+X comme precedemment.
+Puis ecrire : `KEYMAP=NOM_DU_LAYOUT` ou "NOM_DU_LAYOUT" et le layout choisis au debut de l'installation et faites ctrl+S et ctrl+X comme precedemment.
 
 Creer le fichier /etc/hostname : `# nano /etc/hostname`
 
 Puis ecrire le nom que votre machine portera sur cet OS, vous pouvez mettre ce que vous voulez alors lachez-vous !
+
+Creer le fichier /etc/hosts : `# nano /etc/hosts`, descendre de 3 lignes et ecrire :
+
+```
+127.0.0.1        localhost
+::1              localhost
+127.0.1.1        NOM_DE_VOTRE_MACHINE
+```
 
 ## 9. Configurer les utilisateurs 👤
 
@@ -124,7 +136,7 @@ Changer votre mot de passe aussi avec : `# passwd VOTRE_NOM_D'UTILISATEUR`
 
 #### 9.2 Creer l'utilisateur stagiaire
 
-Pour creer le stagiaire : `# useradd -mG Stagiaire`
+Pour creer le stagiaire : `# useradd -m Stagiaire`
 
 Changer le mot de passe aussi avec : `# passwd Stagiaire`
 
@@ -164,11 +176,11 @@ Gestionnaire de Bureau / Fenetre : `# pacman -S i3-gaps i3blocks i3lock i3status
 
 Compiler un programme C : `# pacman -S gcc tcc`
 
-Lire les pages de man : `# pacman -S man-db man_pages texinfo`
+Lire les pages de man : `# pacman -S man-db texinfo`
 
 Lancer un make : `# pacman -S make`
 
-Editer du code source : `# pacman -S emacs vim nano code`
+Editer du code source : `# pacman -S emacs vim code`
 
 Debogguer du code : ` # pacman -S gdb ghidra`
 
@@ -189,6 +201,18 @@ Lancer apache au demarrage : ` # systemctl enable apache`
 Lancer lightdm au demarrage : ` # systemctl enable lightdm`
 
 Lancer networkmanager au demarrage : ` # systemctl enable NetworkManager`
+
+Lancer le server web au demarrage : `# systemctl enable httpd`
+
+## Fin de l'installation
+
+Sortir : `# exit`
+
+Reboot : `# reboot`
+
+Vous pouvez enlever votre iso quand le pc s'eteint.
+
+Votre installation d'Archlinux est terminee ! Bravo !
 
 
 
