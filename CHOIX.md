@@ -15,6 +15,72 @@
 | Éditer une image vectorielle (svg)                                                 | 1                          | Inkscape           |
 | (Dé)Compresser les formats `targz` et `7z` et `rar`                                | 1                          | p7zip              |
 
+## Choix des outils
+
+#### Gestionnaire bureau / besoin
+
+i3 : gestionnaire de fenetre rapide, leger et utilisable entierement au clavier (sauf Navigateur Web).
+
+xfce : gestionnaire de bureau rapide, leger, esthetique et pratique au quotidien.
+
+gnome : gestionnaire de bureau tres beau, facile a prendre en main et pratique au quotidien.
+
+ratpoison : gestionnaire de fenetre ultraleger et rapide, ne propose que le strict minimum. Rends les machines tres peu puissante utilisables.
+
+#### Compiler un programme c
+
+gcc : compilateur gnu performant et plein d'option.
+
+tcc : compilateur minimaliste, moins d'option mais beaucoup plus rapide.
+
+#### Regarder les pages de man de la libc :
+
+man-db : facon traditionnelle de lire les pages de man
+
+texinfo : programme GNU pour lire les pages de man
+
+#### Lancer un make :
+
+make  : programme gnu pour generer des executables
+
+#### Editer du code source
+
+vim : rapide, pas de gui et beaucoup de raccourci tres interresant.
+
+nano : programme gnu, pas de gui non plus mais plus user-friendly que vim.
+
+code : editeur de code de microsoft, belle gui et plein d'extensions tres pratique.
+
+emacs programme gnu, avec une gui tres customisable.
+
+#### Deboguer du code source
+
+gdb : debugger gnu.
+
+ghidra : outils de reverse engineering developpe par la NSA, contient aussi un debugger.
+
+#### Naviguer sur le web
+
+firefox : navigateur rapide, moins gourmands que chrome et tres customisable
+
+lynx : navigateur textuel, adapte au synthetiseurs vocaux.
+
+chromium : projet open-source de google qui sert de base a de nombreux navigateur
+
+#### Editer une image matricielle
+
+imagemagick : programme avec gui peu pratique mais tres interresant a uiliser dans le terminal.
+
+gimp : programme gnu, gui complete requiert un peu d'experience
+
+#### Editer une image vectorielle
+
+inkscape : programme professionel d'edition vectorielle
+
+#### (Dé)Compresser les archives `tar.gz`, `7z`, `rar`
+
+p7zip : peut compresser et decompresser de nombreux format d'archive diffferent.
+
 ## Gestionnaire de paquets
 
 Installer un logiciel : `$ sudo pacman -S PACKAGE_NAME`
@@ -68,17 +134,11 @@ Savoir démarrer/stopper un service : `$ sudo systemctl start NOM_DU_SERVICE` / 
 
 Savoir en vérifier l'état : `$ sudo systemctl status NOM_DU_SERVICE`
 
-Savoir afficher les messages d'erreur.
+Savoir afficher les messages d'erreur : `$ sudo journalctl -u NOM_DU_SERVICE | grep failed`
 
 ## Divers
 
-Comment faire pour que le *stagiaire* n'ait pas accès aux données de votre compte ?
+Comment faire pour que le stagiaire n'ait pas accès aux données de votre compte ?
 
 `$ chmod -R 711 ~/` 
-
-## Bonus
-
-* Écrire un service utilisateur qui se lance dès la connexion de l'utilisateur.
-* Écrire un service qui se lance périodiquement.
-* Installer un logiciel propriétaire en restreignant ses droits d'accès à votre environnement.
 
