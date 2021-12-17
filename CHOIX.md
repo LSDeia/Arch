@@ -1,5 +1,8 @@
+# Dossier d'etude
 
-| Besoin                                                                             | Nombre d'outils différents | Logiciels proposés |
+## Tableau des besoins et solutions
+
+| Besoins                                                                             | Nombre d'outils différents | Logiciels proposés |
 | ---------------------------------------------------------------------------------- | :-------------------------:| :-----------------:|
 | Avoir des Gestionnaires de bureau/fenêtre (dont un qui vous plaise)                | 4                          | i3 xfce gnome ratpoison |
 | Compiler un programme C                                                            | 2                          | gcc tcc            |

@@ -1,6 +1,4 @@
-# ArchLinux
-
-Wiki installation ArchLinux
+# Notice Installation ArchLinux
 
 ❗ **INFORMATION IMPORTANTE** : Chaque suite de caracteres precede d'un `$` est une variable que vous devez modifier vous meme.
 
