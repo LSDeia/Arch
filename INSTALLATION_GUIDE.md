@@ -1,5 +1,7 @@
 # Notice Installation ArchLinux
 
+![haha](arch-icon.png)
+
 ❗ **INFORMATION IMPORTANTE** : Chaque suite de caracteres precede d'un `$` est une variable que vous devez modifier vous meme.
 
 ❗ **Exemple** : ` # echo $MON_PRENOM` devient ` # echo Remi`
