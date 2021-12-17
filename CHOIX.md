@@ -126,7 +126,7 @@ Copiage de l'archive : `$ sudo cp CHEMIN_DE_L'ARCHIVE /mnt`
 
 Demontage de la cle usb : `$ sudo umount /mnt`
 
-Copier l'archive via `scp` (vous pouvez vous entraîner sur `localhost`).
+Copier l'archive via `scp` (vous pouvez vous entraîner sur `localhost`) : `$ scp CHEMIN_DE_L'ARCHIVE USER@DOMAIN:CHEMIN_D'ARRIVE`
 
 ## Services (voir `systemd` ou autre selon OS)
 
