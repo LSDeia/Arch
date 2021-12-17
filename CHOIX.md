@@ -22,11 +22,11 @@ Cette liste n'est pas exhaustive.
 
 * Installer un logiciel : `$ sudo pacman -S PACKAGE_NAME`
 * Désinstaller un logiciel : `$ sudo pacman -R PACKAGE_NAME`
-* Faire une recherche sur les paquets disponibles.
+* Faire une recherche sur les paquets disponibles : `$ pacman -Ss PACKAGE_NAME`
 * Faire une mise à jour : `$ sudo pacman -Syu`
-* Lister les fichiers installés par un paquet.
-* Rechercher quel paquet contient un fichier donné.
-  * Idem si le paquet n'est pas installé.
+* Lister les fichiers installés par un paquet : `$ pacman -Ql PACKAGE_NAME`
+* Rechercher quel paquet contient un fichier donné : `$ pacman -Ql | grep NOM_DU_FICHIER`
+  * Idem si le paquet n'est pas installé : `$ pacman -Fy NOM_DU_FICHIER`
 
 ### Réseau
 
