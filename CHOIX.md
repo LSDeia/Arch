@@ -102,6 +102,8 @@ Idem si le paquet n'est pas installé : `$ pacman -Fy NOM_DU_FICHIER`
 
 ##### Pouvoir se connecter sur une autre machine avec `ssh` :
 
+Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne `#Port 22` et supprimez le diese, puis ctrl+X ctrl+S.
+
 Creation des cles ssh : `$ ssh-keygen`, dans votre dossier ~/.ssh vous trouverez le fichier `id_rsa.pub` il faut copier son contenu dans le fichier ~/.ssh/authorized_keys de la machine a laquelle vous souhaiter vous connecter.
 
 Connexion : `$ ssh USER@DOMAIN` ou USER est le nom d'un utilisateurs de la machine a laquelle vous voulez vous connecter et DOMAIN est l'adresse ip ou le nom de domaine de la machine a laquelle vous voulez vous connecter.

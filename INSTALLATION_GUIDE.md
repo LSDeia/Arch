@@ -56,19 +56,7 @@ Pour commencer la partition du disque executez : `# fdisk /dev/LE_DISQUE_A_PARTI
 
 !!! Attention choisissez bien votre disque, et suivez bien les instructions sous peine de voir votre disque totalement efface !!!
 
-#### 5.1 Partition EFI
-
-Nous allons commencer par creer la partition EFI pour cela tapez `n` puis entrer.
-
-il s'affiche `Numero de la partition` ... tapez entrer.
-
-il s'affiche `Premier secteur`... tapez entrer.
-
-il s'affiche `Dernier secteur`... tapez `+550M`
-
-Ensuite tapez `t`, entrer, puis L. Vous devriez observer une liste, trouvez `EFI filesystem` et tappez `q` entrer, puis son numero.
-
-#### 5.2 Partition Racine
+#### 5.1 Partition Racine
 
 Maintenant nous allons creer la partition Racine, celle ou tout vos fichier se retrouverons pour cela tapez `n` puis entrer.
 
@@ -77,10 +65,6 @@ il s'affiche `Numero de la partition` ... tapez entrer.
 il s'affiche `Premier secteur`... tapez entrer.
 
 il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez donc une valeur superieure ou egale, `+10G`
-
-#### 5.3 Formatter les partitions
-
-Formattage partition EFI : `# mkfs.fat -F 32 /dev/VOTRE_PARTITION_EFI`
 
 Formattage partition Racine : `# mkfs.ext4 /dev/VOTRE_PARTITION_RACINE`
 
@@ -102,7 +86,7 @@ Root dans votre nouveau systeme : `# arch-chroot /mnt`
 
 Changer votre fuseau horaire : `# ln -sf /usr/share/zoneinfo/REGION/VILLE /etc/localtime`
 
-Si vous etes en france la commade sera : `# ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime`
+    Si vous etes en france la commade sera : `# ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime`
 
 Generer le fichier /etc/adjtime : `hwclock --systohc`
 
@@ -158,15 +142,11 @@ Installation des paquets requis : ` # pacman -S grub efibootmgr dosfstools os-pr
 
 Creation du repertoire /boot/EFI : ` # mkdir /boot/EFI`
 
-Monter la partition EFI dans /boot/EFI : ` # mount /dev/sda1 /boot/EFI`
+Monter la partition EFI dans /boot/EFI : ` # mount /dev/LA_PARTITION_EFI /boot/EFI`
 
 Installer le grub : ` # grub-install --target=x86_64-efi --bootloader-id=archlinux_grub --recheck`
 
 Creer le fichier de configurration du grub : `# grub-mkconfig -o /boot/grub/grub.cfg`
-
-## Configuration de ssh Pas ici !!!!!
-
-Editer la configuration de ssh : `# nano /etc/ssh/sshd_config` trouvez la ligne `#Port 22` et supprimez le diese, puis ctrl+X ctrl+S.
 
 ## 11. Installation des paquets 📥
 
@@ -198,7 +178,7 @@ INFORMATION : lynx est un navigateur base sur le textuel, il s'utilise dans le t
 
 Editer une image matricielle / vectorielle  : ` # pacman -S imagemagick inkscape gimp`
 
-(De)compresser des fichier : ` # pacman -S p7zip tar`
+(De)compresser des fichier : ` # pacman -S p7zip`
 
 ## Lancement au demarrage
 
