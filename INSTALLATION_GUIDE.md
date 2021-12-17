@@ -2,15 +2,15 @@
 
 ![haha](arch-icon.png)
 
-❗ **INFORMATION IMPORTANTE** : Chaque suite de caracteres precede d'un `$` est une variable que vous devez modifier vous meme.
+❗ **INFORMATION IMPORTANTE** : Chaque suite de caracteres en MAJUSCULE est une variable que vous devez modifier vous meme.
 
-❗ **Exemple** : ` # echo $MON_PRENOM` devient ` # echo Remi`
+❗ **Exemple** : ` # echo MON_PRENOM` devient ` # echo Remi`
 
 ## 1. Configuration du clavier ⌨
 
 Votre clavier sera par default en US, pour afficher tout les clavier possible executez :`# ls /usr/share/kbd/keymaps/**/*.map.gz `
 
-Pour modifier la configuration du clavier : `# loadkeys $NOM_DU_LAYOUT`
+Pour modifier la configuration du clavier : `# loadkeys NOM_DU_LAYOUT`
 
 ## 2. Verifier le mode de boot ✅
 
@@ -28,11 +28,11 @@ Si tout vas bien vous devriez voir apparaitre `[iwd]#` a l'ecran.
 
 Pour connaitre le nom de votre appareil sans fil : `[iwd]# device list`
 
-Maintenant il faut scanner les reseaux disponibles : `[iwd]# station $DEVICE scan`
+Maintenant il faut scanner les reseaux disponibles : `[iwd]# station DEVICE scan`
 
-Les afficher a l'ecran : `[iwd]# station $DEVICE get-networks`
+Les afficher a l'ecran : `[iwd]# station DEVICE get-networks`
 
-Pour vous connectez a votre reseau sans fil : `[iwd]# station device connect $NOM_DU_RESEAU`
+Pour vous connectez a votre reseau sans fil : `[iwd]# station device connect NOM_DU_RESEAU`
 
 Si un mot de passe est necessaire il vous sera demande de le taper.
 
@@ -52,7 +52,7 @@ Cette partie s'applique au espace de stockage completement vide.
 
 Pour afficher chaque disques et ses partitionns : `# fdisk -l`
 
-Pour commencer la partition du disque executez : `# fdisk /dev/$LE_DISQUE_A_PARTITIONNER`
+Pour commencer la partition du disque executez : `# fdisk /dev/LE_DISQUE_A_PARTITIONNER`
 
 !!! Attention choisissez bien votre disque, et suivez bien les instructions sous peine de voir votre disque totalement efface !!!
 
@@ -80,13 +80,13 @@ il s'affiche `Dernier secteur`... , La taille minimum requise et de ??? tapez do
 
 #### 5.3 Formatter les partitions
 
-Formattage partition EFI : `# mkfs.fat -F 32 /dev/$VOTRE_PARTITION_EFI`
+Formattage partition EFI : `# mkfs.fat -F 32 /dev/VOTRE_PARTITION_EFI`
 
-Formattage partition Racine : `# mkfs.ext4 /dev/$VOTRE_PARTITION_RACINE`
+Formattage partition Racine : `# mkfs.ext4 /dev/VOTRE_PARTITION_RACINE`
 
 ## 6. Monter la partition racine 🔼
 
-Pour continuer il vous faut monter votre partition racine : `# mount /dev/$VOTRE_PARTITION_RACINE /mnt`
+Pour continuer il vous faut monter votre partition racine : `# mount /dev/VOTRE_PARTITION_RACINE /mnt`
 
 ## 7. Installation des paquets esssentiels 📥
 
@@ -96,11 +96,11 @@ Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
 ## 8. Configuration de votre systeme
 
-Generer un fichier "fstab"  : `# genfstab -U /mnt >> ?mnt/etc/fstbab`
+Generer un fichier "fstab"  : `# genfstab -U /mnt >> /mnt/etc/fstbab`
 
 Root dans votre nouveau systeme : `# arch-chroot /mnt`
 
-Changer votre fuseau horaire : `# ln -sf /usr/share/zoneinfo/$REGION/$VILLE /etc/localtime`
+Changer votre fuseau horaire : `# ln -sf /usr/share/zoneinfo/REGION/VILLE /etc/localtime`
 
 Si vous etes en france la commade sera : `# ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime`
 
@@ -118,7 +118,7 @@ Puis ecrire : `LANG=fr_FR.UTF-8` et faites ctrl+S et ctrl+X comme precedemment.
 
 Creer le fichier /etc/vconsole.conf : `# nano /etc/vconsole.conf`
 
-Puis ecrire : `KEYMAP=$NOM_DU_LAYOUT` ou "$NOM_DU_LAYOUT" et le layout choisis au debut de l'installation et faites ctrl+S et ctrl+X comme precedemment.
+Puis ecrire : `KEYMAP=NOM_DU_LAYOUT` ou "$NOM_DU_LAYOUT" et le layout choisis au debut de l'installation et faites ctrl+S et ctrl+X comme precedemment.
 
 Creer le fichier /etc/hostname : `# nano /etc/hostname`
 
@@ -134,15 +134,13 @@ Commande : `# passwd`
 
 #### 9.1 Creation de votre utilisateur
 
-Pour creer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage $VOTRE_NOM_D'UTILISATEUR`
+Pour creer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage VOTRE_NOM_D'UTILISATEUR`
 
-Changer votre mot de passe aussi avec : `# passwd $VOTRE_NOM_D'UTILISATEUR`
+Changer votre mot de passe aussi avec : `# passwd VOTRE_NOM_D'UTILISATEUR`
 
 #### 9.2 Creer l'utilisateur stagiaire
 
 Pour creer le stagiaire : `# useradd -mG Stagiaire`
-
-!!!!!
 
 Changer le mot de passe aussi avec : `# passwd Stagiaire`
 
@@ -150,7 +148,7 @@ Changer le mot de passe aussi avec : `# passwd Stagiaire`
 
 Installation de sudo : ` # pacman -S sudo`
 
-Il faut editer le fichier sudoers : `# EDITOR=nano visudo`
+Il faut editer le fichier sudoers : `# EDITOR=nano visudo` Ici EDITOR n'est pas une variable
 
 Parcourez le fichier jusqu'a trouver la ligne : `# %wheel ALL=(ALL) ALL` et supprimez le `#` en debut de ligne puis faites ctrl+S et ctrl+X.
 
