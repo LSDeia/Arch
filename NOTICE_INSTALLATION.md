@@ -84,7 +84,7 @@ Nous installerons le reste des paquets dont vous avez besoin plus tard.
 
 ## 8. Configuration de votre systeme
 
-Générer un fichier "fstab"  : `# genfstab -U /mnt >> /mnt/etc/fstbab`
+Générer un fichier "fstab"  : `# genfstab -U /mnt >> /mnt/etc/fstab`
 
 Root dans votre nouveau systeme : `# arch-chroot /mnt`
 
@@ -133,12 +133,6 @@ Commande : `# passwd`
 Pour créer votre utilisateur : `# useradd -mG wheel,video,audio,optical,storage VOTRE_NOM_D'UTILISATEUR`
 
 Changez votre mot de passe aussi avec : `# passwd VOTRE_NOM_D'UTILISATEUR`
-
-#### 9.2 Creer l'utilisateur stagiaire
-
-Pour créer le stagiaire : `# useradd -m Stagiaire`
-
-Changez le mot de passe aussi avec : `# passwd Stagiaire`
 
 #### 9.3 Configuration du groupe wheel
 
